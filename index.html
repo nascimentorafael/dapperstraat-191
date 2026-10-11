@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1d3f6e">
+<title>Dapperstraat 191 · Guest guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef1ee;        /* fog over the canal */
+  --surface:#fbfcfa;
+  --ink:#1c2626;
+  --muted:#5b6866;
+  --line:#d6ddd9;
+  --enamel:#1d3f6e;    /* Amsterdam house-number blue */
+  --enamel-ink:#ffffff;
+  --awning:#f2c14e;    /* Dappermarkt awning yellow */
+  --link:#1d3f6e;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#121a1c; --surface:#1a2427; --ink:#e4ebe8; --muted:#9aa9a6; --line:#2c3a3d;
+    --enamel:#24508a; --link:#9cc0f0;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font:400 17px/1.55 "Atkinson Hyperlegible",system-ui,sans-serif;
+  -webkit-text-size-adjust:100%;
+}
+.wrap{max-width:640px;margin:0 auto;padding:0 18px}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.15;margin:0}
+a{color:var(--link);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--awning);outline-offset:2px;border-radius:4px}
+
+/* ---------- hero: the house-number plate ---------- */
+header.wrap{padding-top:36px;padding-bottom:28px}
+.plate{
+  display:inline-flex;align-items:center;justify-content:center;
+  background:var(--enamel);color:var(--enamel-ink);
+  border-radius:14px;padding:6px;
+  box-shadow:0 2px 0 rgba(0,0,0,.18);
+}
+.plate span{
+  display:block;border:2px solid rgba(255,255,255,.9);border-radius:10px;
+  font:700 68px/1 "Bricolage Grotesque",sans-serif;letter-spacing:-1px;
+  padding:10px 22px 12px;
+}
+.street{font:500 15px/1.3 "Bricolage Grotesque",sans-serif;color:var(--muted);margin:14px 0 4px}
+header h1{font-size:34px;font-weight:700;margin-top:18px}
+header p.lede{color:var(--muted);margin:10px 0 0;max-width:34em}
+
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:22px 0 0}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.fact b{display:block;font:700 22px/1.1 "Bricolage Grotesque",sans-serif}
+.fact small{color:var(--muted);font-size:14px}
+.fact.wide{grid-column:1 / -1}
+.fact.wide a{font-weight:700}
+
+/* ---------- nav ---------- */
+nav{
+  position:sticky;top:0;z-index:5;background:var(--bg);
+  border-bottom:1px solid var(--line);
+}
+nav .wrap{display:flex;gap:8px;overflow-x:auto;padding-top:10px;padding-bottom:10px;scrollbar-width:none}
+nav .wrap::-webkit-scrollbar{display:none}
+nav a{
+  flex:0 0 auto;text-decoration:none;color:var(--ink);font-size:15px;
+  border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 13px;
+}
+
+/* ---------- wifi ---------- */
+#wifi{margin-top:28px}
+.wifi{background:var(--enamel);color:var(--enamel-ink);border-radius:16px;padding:20px 18px}
+.wifi h2{font-size:24px;margin-bottom:14px;color:var(--enamel-ink)}
+.cred{display:flex;align-items:center;gap:12px;padding:12px 0;border-top:1px solid rgba(255,255,255,.22)}
+.cred div{flex:1;min-width:0}
+.cred small{display:block;opacity:.8;font-size:14px}
+.cred code{font:700 20px/1.3 "Atkinson Hyperlegible",sans-serif;letter-spacing:.5px;word-break:break-all}
+.copy{
+  flex:0 0 auto;font:700 15px "Atkinson Hyperlegible",sans-serif;cursor:pointer;
+  background:var(--awning);color:#1c2626;border:0;border-radius:10px;padding:10px 14px;min-width:92px;
+}
+.wifi details{margin-top:6px;border-top:1px solid rgba(255,255,255,.22);padding-top:12px}
+.wifi summary{cursor:pointer;font-weight:700}
+.wifi .qrbox{background:#fff;border-radius:12px;padding:12px;margin:14px auto 4px;width:200px}
+.qr{display:block;width:100%;height:auto}
+.wifi .hint{font-size:14px;opacity:.85;margin:10px 0 0}
+
+/* ---------- sections ---------- */
+section{padding:34px 0 6px}
+section h2{font-size:27px;font-weight:700;margin-bottom:14px}
+.group{margin:18px 0 0}
+.group h3{font-size:18px;font-weight:700;margin-bottom:6px}
+ul{list-style:none;margin:0;padding:0}
+li{padding:9px 0;border-bottom:1px solid var(--line)}
+li:last-child{border-bottom:0}
+a.place{font-weight:700}
+.addr{color:var(--muted);font-size:15px}
+.addr::before{content:"· "}
+
+/* accordions for "how things work" */
+.howto details{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin:8px 0}
+.howto summary{cursor:pointer;list-style:none;padding:13px 16px;font-weight:700;display:flex;justify-content:space-between;gap:12px}
+.howto summary::-webkit-details-marker{display:none}
+.howto summary::after{content:"+";font:500 22px/1 "Bricolage Grotesque",sans-serif;color:var(--muted)}
+.howto details[open] summary::after{content:"–"}
+.howto .body{padding:0 16px 12px}
+.howto .body ul li{padding:7px 0}
+.howto ol{margin:0;padding-left:22px}
+.howto ol li{border:0;padding:4px 0}
+
+.note{background:var(--surface);border-left:4px solid var(--awning);border-radius:8px;padding:12px 14px;margin:14px 0 0}
+
+footer{padding:40px 0 60px;color:var(--muted);font-size:15px}
+footer p{margin:6px 0}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="plate" aria-hidden="true"><span>191</span></div>
+  <p class="street">Dapperstraat · Amsterdam-Oost</p>
+  <h1>Welcome home</h1>
+  <p class="lede">I hope you’ll like my apartment. Make yourself at home and open any cupboard you like: there are no secrets. Mi casa es tu casa for this period!</p>
+
+  <div class="facts">
+    <div class="fact"><small>Check-in from</small><b>14:00</b></div>
+    <div class="fact"><small>Check-out by</small><b>13:00</b></div>
+    <div class="fact wide"><small>Address</small><br><a href="https://maps.google.com/?q=Dapperstraat+191%2C+1093+BS+Amsterdam" target="_blank" rel="noopener">Dapperstraat 191, 1093 BS Amsterdam</a></div>
+  </div>
+</header>
+
+<nav aria-label="Sections"><div class="wrap"><a href="#wifi">Wi-Fi</a><a href="#house">The house</a><a href="#rules">House rules</a><a href="#checkout">Check-out</a><a href="#getting-here">Getting here</a><a href="#shops">Shops</a><a href="#food">Food &amp; drink</a><a href="#going-out">Going out</a><a href="#things-to-do">Things to do</a></div></nav>
+
+<main class="wrap">
+
+<section id="wifi" style="padding-top:0">
+  <div class="wifi">
+    <h2>Wi-Fi</h2>
+    <div class="cred">
+      <div><small>Network</small><code id="ssid">KPN936C46</code></div>
+      <button class="copy" data-copy="ssid">Copy</button>
+    </div>
+    <div class="cred">
+      <div><small>Password</small><code id="pass">p2Ks9MdCfw94V6W2</code></div>
+      <button class="copy" data-copy="pass">Copy</button>
+    </div>
+    <p class="hint">Copy the password, then pick <b>KPN936C46</b> in your phone’s Wi-Fi settings and paste it.</p>
+    <details>
+      <summary>Connecting a laptop or another phone?</summary>
+      <div class="qrbox">
+<svg class="qr" role="img" aria-label="Wi-Fi QR code" version="1.1" viewBox="0 0 35 35" xmlns="http://www.w3.org/2000/svg"><path d="M1,1H2V2H1zM2,1H3V2H2zM3,1H4V2H3zM4,1H5V2H4zM5,1H6V2H5zM6,1H7V2H6zM7,1H8V2H7zM9,1H10V2H9zM11,1H12V2H11zM12,1H13V2H12zM13,1H14V2H13zM14,1H15V2H14zM17,1H18V2H17zM18,1H19V2H18zM21,1H22V2H21zM22,1H23V2H22zM23,1H24V2H23zM24,1H25V2H24zM27,1H28V2H27zM28,1H29V2H28zM29,1H30V2H29zM30,1H31V2H30zM31,1H32V2H31zM32,1H33V2H32zM33,1H34V2H33zM1,2H2V3H1zM7,2H8V3H7zM9,2H10V3H9zM13,2H14V3H13zM14,2H15V3H14zM15,2H16V3H15zM17,2H18V3H17zM19,2H20V3H19zM20,2H21V3H20zM21,2H22V3H21zM25,2H26V3H25zM27,2H28V3H27zM33,2H34V3H33zM1,3H2V4H1zM3,3H4V4H3zM4,3H5V4H4zM5,3H6V4H5zM7,3H8V4H7zM9,3H10V4H9zM11,3H12V4H11zM12,3H13V4H12zM14,3H15V4H14zM15,3H16V4H15zM17,3H18V4H17zM20,3H21V4H20zM21,3H22V4H21zM22,3H23V4H22zM24,3H25V4H24zM25,3H26V4H25zM27,3H28V4H27zM29,3H30V4H29zM30,3H31V4H30zM31,3H32V4H31zM33,3H34V4H33zM1,4H2V5H1zM3,4H4V5H3zM4,4H5V5H4zM5,4H6V5H5zM7,4H8V5H7zM10,4H11V5H10zM11,4H12V5H11zM12,4H13V5H12zM15,4H16V5H15zM17,4H18V5H17zM19,4H20V5H19zM21,4H22V5H21zM23,4H24V5H23zM24,4H25V5H24zM25,4H26V5H25zM27,4H28V5H27zM29,4H30V5H29zM30,4H31V5H30zM31,4H32V5H31zM33,4H34V5H33zM1,5H2V6H1zM3,5H4V6H3zM4,5H5V6H4zM5,5H6V6H5zM7,5H8V6H7zM9,5H10V6H9zM12,5H13V6H12zM14,5H15V6H14zM16,5H17V6H16zM17,5H18V6H17zM18,5H19V6H18zM23,5H24V6H23zM24,5H25V6H24zM27,5H28V6H27zM29,5H30V6H29zM30,5H31V6H30zM31,5H32V6H31zM33,5H34V6H33zM1,6H2V7H1zM7,6H8V7H7zM16,6H17V7H16zM17,6H18V7H17zM20,6H21V7H20zM22,6H23V7H22zM23,6H24V7H23zM25,6H26V7H25zM27,6H28V7H27zM33,6H34V7H33zM1,7H2V8H1zM2,7H3V8H2zM3,7H4V8H3zM4,7H5V8H4zM5,7H6V8H5zM6,7H7V8H6zM7,7H8V8H7zM9,7H10V8H9zM11,7H12V8H11zM13,7H14V8H13zM15,7H16V8H15zM17,7H18V8H17zM19,7H20V8H19zM21,7H22V8H21zM23,7H24V8H23zM25,7H26V8H25zM27,7H28V8H27zM28,7H29V8H28zM29,7H30V8H29zM30,7H31V8H30zM31,7H32V8H31zM32,7H33V8H32zM33,7H34V8H33zM10,8H11V9H10zM11,8H12V9H11zM13,8H14V9H13zM14,8H15V9H14zM16,8H17V9H16zM17,8H18V9H17zM19,8H20V9H19zM23,8H24V9H23zM24,8H25V9H24zM1,9H2V10H1zM4,9H5V10H4zM5,9H6V10H5zM6,9H7V10H6zM7,9H8V10H7zM8,9H9V10H8zM9,9H10V10H9zM14,9H15V10H14zM15,9H16V10H15zM18,9H19V10H18zM19,9H20V10H19zM21,9H22V10H21zM22,9H23V10H22zM24,9H25V10H24zM26,9H27V10H26zM29,9H30V10H29zM31,9H32V10H31zM32,9H33V10H32zM33,9H34V10H33zM1,10H2V11H1zM5,10H6V11H5zM8,10H9V11H8zM9,10H10V11H9zM10,10H11V11H10zM13,10H14V11H13zM14,10H15V11H14zM15,10H16V11H15zM16,10H17V11H16zM18,10H19V11H18zM20,10H21V11H20zM21,10H22V11H21zM22,10H23V11H22zM24,10H25V11H24zM25,10H26V11H25zM26,10H27V11H26zM27,10H28V11H27zM28,10H29V11H28zM29,10H30V11H29zM4,11H5V12H4zM6,11H7V12H6zM7,11H8V12H7zM11,11H12V12H11zM13,11H14V12H13zM14,11H15V12H14zM16,11H17V12H16zM17,11H18V12H17zM23,11H24V12H23zM24,11H25V12H24zM26,11H27V12H26zM27,11H28V12H27zM28,11H29V12H28zM29,11H30V12H29zM31,11H32V12H31zM32,11H33V12H32zM33,11H34V12H33zM1,12H2V13H1zM8,12H9V13H8zM12,12H13V13H12zM13,12H14V13H13zM14,12H15V13H14zM16,12H17V13H16zM17,12H18V13H17zM19,12H20V13H19zM20,12H21V13H20zM22,12H23V13H22zM23,12H24V13H23zM25,12H26V13H25zM27,12H28V13H27zM31,12H32V13H31zM32,12H33V13H32zM33,12H34V13H33zM2,13H3V14H2zM3,13H4V14H3zM4,13H5V14H4zM6,13H7V14H6zM7,13H8V14H7zM10,13H11V14H10zM14,13H15V14H14zM18,13H19V14H18zM20,13H21V14H20zM22,13H23V14H22zM24,13H25V14H24zM25,13H26V14H25zM27,13H28V14H27zM30,13H31V14H30zM31,13H32V14H31zM32,13H33V14H32zM33,13H34V14H33zM1,14H2V15H1zM2,14H3V15H2zM5,14H6V15H5zM6,14H7V15H6zM10,14H11V15H10zM15,14H16V15H15zM18,14H19V15H18zM19,14H20V15H19zM20,14H21V15H20zM21,14H22V15H21zM25,14H26V15H25zM27,14H28V15H27zM30,14H31V15H30zM31,14H32V15H31zM32,14H33V15H32zM33,14H34V15H33zM1,15H2V16H1zM4,15H5V16H4zM5,15H6V16H5zM6,15H7V16H6zM7,15H8V16H7zM8,15H9V16H8zM9,15H10V16H9zM10,15H11V16H10zM13,15H14V16H13zM14,15H15V16H14zM16,15H17V16H16zM18,15H19V16H18zM19,15H20V16H19zM20,15H21V16H20zM21,15H22V16H21zM22,15H23V16H22zM23,15H24V16H23zM28,15H29V16H28zM1,16H2V17H1zM2,16H3V17H2zM3,16H4V17H3zM4,16H5V17H4zM5,16H6V17H5zM6,16H7V17H6zM8,16H9V17H8zM10,16H11V17H10zM12,16H13V17H12zM17,16H18V17H17zM21,16H22V17H21zM23,16H24V17H23zM24,16H25V17H24zM25,16H26V17H25zM26,16H27V17H26zM28,16H29V17H28zM29,16H30V17H29zM30,16H31V17H30zM31,16H32V17H31zM32,16H33V17H32zM1,17H2V18H1zM3,17H4V18H3zM4,17H5V18H4zM5,17H6V18H5zM6,17H7V18H6zM7,17H8V18H7zM8,17H9V18H8zM9,17H10V18H9zM10,17H11V18H10zM11,17H12V18H11zM12,17H13V18H12zM13,17H14V18H13zM14,17H15V18H14zM15,17H16V18H15zM16,17H17V18H16zM18,17H19V18H18zM21,17H22V18H21zM22,17H23V18H22zM23,17H24V18H23zM26,17H27V18H26zM27,17H28V18H27zM29,17H30V18H29zM32,17H33V18H32zM33,17H34V18H33zM1,18H2V19H1zM3,18H4V19H3zM4,18H5V19H4zM9,18H10V19H9zM11,18H12V19H11zM13,18H14V19H13zM14,18H15V19H14zM15,18H16V19H15zM18,18H19V19H18zM21,18H22V19H21zM23,18H24V19H23zM24,18H25V19H24zM26,18H27V19H26zM29,18H30V19H29zM31,18H32V19H31zM4,19H5V20H4zM5,19H6V20H5zM6,19H7V20H6zM7,19H8V20H7zM10,19H11V20H10zM11,19H12V20H11zM13,19H14V20H13zM14,19H15V20H14zM16,19H17V20H16zM17,19H18V20H17zM18,19H19V20H18zM19,19H20V20H19zM20,19H21V20H20zM21,19H22V20H21zM22,19H23V20H22zM23,19H24V20H23zM24,19H25V20H24zM27,19H28V20H27zM28,19H29V20H28zM29,19H30V20H29zM30,19H31V20H30zM33,19H34V20H33zM1,20H2V21H1zM4,20H5V21H4zM5,20H6V21H5zM6,20H7V21H6zM10,20H11V21H10zM14,20H15V21H14zM16,20H17V21H16zM23,20H24V21H23zM24,20H25V21H24zM25,20H26V21H25zM28,20H29V21H28zM30,20H31V21H30zM31,20H32V21H31zM32,20H33V21H32zM33,20H34V21H33zM2,21H3V22H2zM5,21H6V22H5zM6,21H7V22H6zM7,21H8V22H7zM8,21H9V22H8zM13,21H14V22H13zM14,21H15V22H14zM15,21H16V22H15zM16,21H17V22H16zM17,21H18V22H17zM19,21H20V22H19zM20,21H21V22H20zM22,21H23V22H22zM23,21H24V22H23zM24,21H25V22H24zM26,21H27V22H26zM29,21H30V22H29zM31,21H32V22H31zM1,22H2V23H1zM2,22H3V23H2zM3,22H4V23H3zM4,22H5V23H4zM6,22H7V23H6zM9,22H10V23H9zM10,22H11V23H10zM11,22H12V23H11zM13,22H14V23H13zM14,22H15V23H14zM22,22H23V23H22zM24,22H25V23H24zM25,22H26V23H25zM26,22H27V23H26zM28,22H29V23H28zM29,22H30V23H29zM30,22H31V23H30zM31,22H32V23H31zM32,22H33V23H32zM33,22H34V23H33zM1,23H2V24H1zM3,23H4V24H3zM4,23H5V24H4zM5,23H6V24H5zM6,23H7V24H6zM7,23H8V24H7zM8,23H9V24H8zM10,23H11V24H10zM11,23H12V24H11zM12,23H13V24H12zM14,23H15V24H14zM15,23H16V24H15zM18,23H19V24H18zM19,23H20V24H19zM20,23H21V24H20zM21,23H22V24H21zM23,23H24V24H23zM24,23H25V24H24zM27,23H28V24H27zM28,23H29V24H28zM32,23H33V24H32zM33,23H34V24H33zM1,24H2V25H1zM5,24H6V25H5zM8,24H9V25H8zM12,24H13V25H12zM15,24H16V25H15zM16,24H17V25H16zM18,24H19V25H18zM19,24H20V25H19zM20,24H21V25H20zM21,24H22V25H21zM23,24H24V25H23zM25,24H26V25H25zM28,24H29V25H28zM29,24H30V25H29zM30,24H31V25H30zM31,24H32V25H31zM32,24H33V25H32zM33,24H34V25H33zM1,25H2V26H1zM2,25H3V26H2zM7,25H8V26H7zM9,25H10V26H9zM11,25H12V26H11zM14,25H15V26H14zM15,25H16V26H15zM19,25H20V26H19zM23,25H24V26H23zM25,25H26V26H25zM26,25H27V26H26zM27,25H28V26H27zM28,25H29V26H28zM29,25H30V26H29zM32,25H33V26H32zM9,26H10V27H9zM10,26H11V27H10zM12,26H13V27H12zM13,26H14V27H13zM14,26H15V27H14zM15,26H16V27H15zM16,26H17V27H16zM18,26H19V27H18zM21,26H22V27H21zM22,26H23V27H22zM23,26H24V27H23zM24,26H25V27H24zM25,26H26V27H25zM29,26H30V27H29zM32,26H33V27H32zM1,27H2V28H1zM2,27H3V28H2zM3,27H4V28H3zM4,27H5V28H4zM5,27H6V28H5zM6,27H7V28H6zM7,27H8V28H7zM9,27H10V28H9zM10,27H11V28H10zM14,27H15V28H14zM15,27H16V28H15zM16,27H17V28H16zM17,27H18V28H17zM18,27H19V28H18zM20,27H21V28H20zM21,27H22V28H21zM24,27H25V28H24zM25,27H26V28H25zM27,27H28V28H27zM29,27H30V28H29zM30,27H31V28H30zM31,27H32V28H31zM1,28H2V29H1zM7,28H8V29H7zM9,28H10V29H9zM11,28H12V29H11zM12,28H13V29H12zM13,28H14V29H13zM14,28H15V29H14zM17,28H18V29H17zM18,28H19V29H18zM19,28H20V29H19zM20,28H21V29H20zM21,28H22V29H21zM22,28H23V29H22zM23,28H24V29H23zM25,28H26V29H25zM29,28H30V29H29zM31,28H32V29H31zM32,28H33V29H32zM33,28H34V29H33zM1,29H2V30H1zM3,29H4V30H3zM4,29H5V30H4zM5,29H6V30H5zM7,29H8V30H7zM9,29H10V30H9zM10,29H11V30H10zM12,29H13V30H12zM15,29H16V30H15zM16,29H17V30H16zM17,29H18V30H17zM18,29H19V30H18zM22,29H23V30H22zM23,29H24V30H23zM24,29H25V30H24zM25,29H26V30H25zM26,29H27V30H26zM27,29H28V30H27zM28,29H29V30H28zM29,29H30V30H29zM32,29H33V30H32zM1,30H2V31H1zM3,30H4V31H3zM4,30H5V31H4zM5,30H6V31H5zM7,30H8V31H7zM9,30H10V31H9zM11,30H12V31H11zM12,30H13V31H12zM13,30H14V31H13zM15,30H16V31H15zM17,30H18V31H17zM19,30H20V31H19zM22,30H23V31H22zM23,30H24V31H23zM25,30H26V31H25zM26,30H27V31H26zM28,30H29V31H28zM29,30H30V31H29zM30,30H31V31H30zM33,30H34V31H33zM1,31H2V32H1zM3,31H4V32H3zM4,31H5V32H4zM5,31H6V32H5zM7,31H8V32H7zM10,31H11V32H10zM13,31H14V32H13zM16,31H17V32H16zM19,31H20V32H19zM20,31H21V32H20zM22,31H23V32H22zM23,31H24V32H23zM24,31H25V32H24zM25,31H26V32H25zM26,31H27V32H26zM27,31H28V32H27zM29,31H30V32H29zM31,31H32V32H31zM32,31H33V32H32zM33,31H34V32H33zM1,32H2V33H1zM7,32H8V33H7zM10,32H11V33H10zM11,32H12V33H11zM12,32H13V33H12zM14,32H15V33H14zM15,32H16V33H15zM19,32H20V33H19zM20,32H21V33H20zM21,32H22V33H21zM23,32H24V33H23zM24,32H25V33H24zM26,32H27V33H26zM27,32H28V33H27zM29,32H30V33H29zM31,32H32V33H31zM32,32H33V33H32zM33,32H34V33H33zM1,33H2V34H1zM2,33H3V34H2zM3,33H4V34H3zM4,33H5V34H4zM5,33H6V34H5zM6,33H7V34H6zM7,33H8V34H7zM9,33H10V34H9zM10,33H11V34H10zM11,33H12V34H11zM12,33H13V34H12zM13,33H14V34H13zM14,33H15V34H14zM15,33H16V34H15zM16,33H17V34H16zM18,33H19V34H18zM20,33H21V34H20zM21,33H22V34H21zM23,33H24V34H23zM25,33H26V34H25zM26,33H27V34H26zM27,33H28V34H27zM28,33H29V34H28zM30,33H31V34H30z" id="qr-path" fill="#000000" fill-opacity="1" fill-rule="nonzero" stroke="none"/></svg></div>
+      <p class="hint" style="text-align:center">Scan with the camera to join automatically. The same code is on the printed manual.</p>
+    </details>
+  </div>
+</section>
+
+<section id="house">
+  <h2>The house</h2>
+  <p>This is not a holiday house: it’s the apartment I normally live in, so you’ll find my things around. I hope you like it!</p>
+  <div class="howto">
+    <details><summary>Neighbors</summary><div class="body"><ul>
+      <li>If someone in the building asks who you are, just say: “I’m a friend of Rafa.” The neighbors know me, so it will be all fine.</li>
+      <li>Please always greet the neighbors with a “Hi”.</li>
+    </ul></div></details>
+
+    <details><summary>Food, coffee and tea</summary><div class="body"><ul>
+      <li>Please <b>don’t</b> use the food on the shelf right above the stove, or my supplements on top of the microwave.</li>
+      <li>Feel free to use pepper, salt, oil, sugar, ketchup, mustard, herbs and so on.</li>
+      <li>Tea bags and the coffee machine are yours to use. How the machine works: <a href="https://www.youtube.com/watch?v=cBfM8gQHn9A" target="_blank" rel="noopener">video</a>, or search YouTube for “Philips 2300 LatteGo”.</li>
+      <li>There is space for you in the fridge. Anything already in there that won’t be fresh when I’m back, you can use too.</li>
+      <li>Pans are in the drawer below the coffee machine. Please use the cutting boards for cutting.</li>
+      <li>Tap water is safe to drink.</li>
+    </ul></div></details>
+
+    <details><summary>Dishwasher</summary><div class="body">
+      <ol>
+        <li>Tablets are in the kitchen, in the white cupboard on the far right.</li>
+        <li>Put a tablet in and press the power button.</li>
+        <li>Choose a program, for example ECO, and press START.</li>
+        <li>Close the door. If you hear water running, it’s working. If not, try again.</li>
+      </ol>
+    </div></details>
+
+    <details><summary>Bathroom light</summary><div class="body"><ul>
+      <li>It’s a typical old Dutch pull string. You’ll find the string on your right as you enter the bathroom: pull it to switch the light on or off.</li>
+    </ul></div></details>
+
+    <details><summary>Towels and bedding</summary><div class="body"><ul>
+      <li>Your towels are on top of the double bed. Extra towels are in the bathroom, below the sink.</li>
+      <li>Extra pillows and bedding are in the storage compartment of the sofa.</li>
+    </ul></div></details>
+
+    <details><summary>Sofa bed and air mattress</summary><div class="body"><ul>
+      <li>The sofa turns into a bed. <b>Ask me on WhatsApp for a video</b> of how to do it.</li>
+      <li>For 3 or 4 people there is also an air mattress, in the sofa storage compartment. Plug it in and it inflates in a few minutes; deflating works the same way.</li>
+      <li>On your last day, please put the mattress back how and where you found it.</li>
+    </ul></div></details>
+
+    <details><summary>Heating</summary><div class="body"><ul>
+      <li>The heating goes to 19°C during the day and 15°C at night, automatically.</li>
+      <li>Cold? There’s an extra blanket in the closet, and an extra layer under your sweater helps a lot.</li>
+      <li>To warm up faster, turn the wheel on the thermostat on the kitchen wall. It raises the temperature for one hour, then goes back by itself.</li>
+    </ul></div></details>
+
+    <details><summary>Garbage</summary><div class="body"><ul>
+      <li>Full bag? Take it to one of the street bins. The closest one is at the corner, to the left as you leave the building; it has instructions on it.</li>
+      <li>New garbage bags are in the kitchen cupboard below the sink.</li>
+    </ul></div></details>
+
+    <details><summary>Robot vacuum</summary><div class="body"><ul>
+      <li>Make sure the floor is dry and free of cables, then press the middle button once. It cleans and goes back to its base by itself.</li>
+    </ul></div></details>
+
+    <details><summary>Plants</summary><div class="body"><ul>
+      <li>It would be great if you water the plants: once a week when it’s cold, every day when it’s hot.</li>
+      <li>Please be careful with my big cactus. He had an accident with a previous guest and needs some care.</li>
+    </ul></div></details>
+
+    <details><summary>Bikes and public transport</summary><div class="body"><ul>
+      <li>Rent a bike at <a class="place" href="https://maps.app.goo.gl/UmfSGZG1EdXU9h266" target="_blank" rel="noopener">Wielmaat</a>, a few doors down at Wagenaarstraat 101B.</li>
+      <li>On all trams, metros, buses and trains you can pay by tapping your bank card or phone when you get on and off.</li>
+      <li>Plan trips with Google Maps or <a href="https://9292.nl/en" target="_blank" rel="noopener">9292</a>.</li>
+    </ul></div></details>
+  </div>
+</section>
+
+<section id="rules">
+  <h2>House rules</h2>
+  <ul>
+    <li><strong>No smoking inside.</strong> You can smoke on the balconies, where you’ll find ashtrays.</li>
+    <li><strong>Quiet hours</strong> are from 22:00 to 08:00, so no loud music then.</li>
+    <li><strong>No parties or events.</strong></li>
+    <li><strong>Visitors:</strong> only registered guests can stay. Planning to have someone over? Just let me know in advance.</li>
+    <li><strong>Breakages and losses</strong> are charged through Airbnb: broken glasses or kitchen items at shop price plus €20 for my trip to the shop, and €80 for a lost set of keys.</li>
+    <li><strong>Leave the place as you found it</strong> and I’ll be happy. If it’s left in a mess, a €70 cleaning fee applies.</li>
+  </ul>
+</section>
+
+<section id="checkout">
+  <h2>Check-out</h2>
+  <p>Please leave by <b>13:00</b> so the cleaner can start. Leaving Amsterdam later? You can keep your luggage in the apartment, plus one set of keys, and pick it up any time that day.</p>
+  <div class="group"><h3>Before you go</h3><ul>
+    <li>Leave the place “clean for the eye”: just remove visible trash. No need to vacuum or scrub, the cleaner does the rest.</li>
+    <li>Put full garbage bags on the back balcony (bedroom side).</li>
+    <li>Put dirty dishes in the dishwasher and start it. Whatever doesn’t fit, wash by hand.</li>
+    <li>Used the air mattress? Put it back how and where you found it.</li>
+    <li>Leave the keys on the dining table and pull the door firmly behind you. It needs a good push to close properly.</li>
+  </ul></div>
+</section>
+
+<section id="getting-here"><h2>Getting to the apartment</h2>
+<div class="group"><h3>Apartment address</h3><ul>
+<li>Dapperstraat 191, 1093 BS Amsterdam. The neighborhood is called the Dapperbuurt, in Amsterdam-Oost (East).</li>
+</ul></div>
+<div class="group"><h3>From Schiphol Airport</h3><ul>
+<li>Take the train to Amsterdam Centraal (about 15 minutes, trains leave every few minutes), then continue as described below.</li>
+<li>The NS app or Google Maps sometimes suggests a route via Amsterdam Muiderpoort station instead. That works just as well.</li>
+</ul></div>
+<div class="group"><h3>From Amsterdam Centraal</h3><ul>
+<li><strong>Tram:</strong> take tram 14 towards Flevopark and get off at Pontanusstraat. From there it is a short walk to Dapperstraat.</li>
+<li><strong>Train:</strong> take a Sprinter to Amsterdam Muiderpoort (one stop, about 5 minutes). From the station it is about a 10-minute walk.</li>
+<li>On trams, metros, buses and trains you pay by tapping your bank card or phone on the card reader when you get on and again when you get off.</li>
+</ul></div>
+<div class="group"><h3>Coming by car</h3><ul>
+<li>I don’t recommend driving into the city: street parking is expensive, it is charged per hour (weekends included), and free spots are very hard to find.</li>
+<li>The best option is a P+R (Park and Ride) garage at the edge of the city. The closest ones to the apartment are <a class="place" href="https://maps.google.com/?q=P%2BR+Zeeburg+2%2C+Amsterdam" target="_blank" rel="noopener">P+R Zeeburg</a>, in the east, connected to the city by tram 26 and bus 37.</li>
+<li>The P+R rate is about €6 per 24 hours (€13 for the first 24 hours if you arrive before 10:00 on a weekday), but only if you continue by public transport. When paying at the machine, you scan your OV-chipkaart or GVB P+R ticket. A bank card used to tap in does not count for the discount. Prices as of January 2026.</li>
+<li>All details: <a href="https://www.amsterdam.nl/en/parking/park-ride/how-does-work/" target="_blank" rel="noopener">How P+R works (amsterdam.nl)</a></li>
+</ul></div>
+<div class="group"><h3>Returning to the airport</h3><ul>
+<li>Take tram 14 or a Sprinter back to Amsterdam Centraal, then the train to Schiphol. Allow about 45 minutes in total.</li>
+<li>Trains to Schiphol run several times an hour, so you don’t need to plan around a specific departure. The NS app shows the fastest connection, which is sometimes via Amsterdam Zuid.</li>
+<li>Don’t forget to tap your card again when you leave the tram, metro or station, otherwise you pay the maximum fare.</li>
+</ul></div>
+</section>
+<section id="shops"><h2>Shopping nearby</h2>
+<div class="group"><h3>The Dappermarkt</h3><ul>
+<li>The street market at the front door has been running since 1910 and is the best place for fruit, vegetables, cheese, fish, nuts and flowers. Open Monday to Saturday.</li>
+</ul></div>
+<div class="group"><h3>Supermarkets</h3><ul>
+<li><a class="place" href="https://maps.google.com/?q=Albert+Heijn%2C+Eerste+van+Swindenstraat+91%2C+Amsterdam" target="_blank" rel="noopener">Albert Heijn</a> <span class="addr">Eerste van Swindenstraat 91</span>: around the corner, open every day until late. Regular prices.</li>
+<li><a class="place" href="https://maps.google.com/?q=Lidl%2C+Eerste+van+Swindenstraat+52A%2C+Amsterdam" target="_blank" rel="noopener">Lidl</a> <span class="addr">Eerste van Swindenstraat 52A</span>: lower prices, with an in-store bakery.</li>
+<li><a class="place" href="https://maps.google.com/?q=AH+Celebesstraat+43%2C+Amsterdam" target="_blank" rel="noopener">Albert Heijn</a> <span class="addr">Celebesstraat 43</span>: a bigger supermarket, about 10 minutes away in the Indische Buurt.</li>
+<li>Not every supermarket accepts credit cards. A debit card or paying with your phone is the safest option.</li>
+</ul></div>
+<div class="group"><h3>Bakeries</h3><ul>
+<li><a class="place" href="https://maps.google.com/?q=Olafbrood%2C+Dapperstraat+42%2C+Amsterdam" target="_blank" rel="noopener">Olafbrood</a> <span class="addr">Dapperstraat 42</span>: sourdough bread, croissants and madeleines. Closed on Sundays.</li>
+<li><a class="place" href="https://maps.google.com/?q=L%E2%80%99Abeille+Pastry+%26+Coffee%2C+Dapperstraat+7%2C+Amsterdam" target="_blank" rel="noopener">L’Abeille Pastry &amp; Coffee</a> <span class="addr">Dapperstraat 7</span>: French pastries and coffee.</li>
+<li><a class="place" href="https://maps.google.com/?q=Baking+Lab%2C+Linnaeusstraat+99H%2C+Amsterdam" target="_blank" rel="noopener">Baking Lab</a> <span class="addr">Linnaeusstraat 99H</span>: bakery and café with pastries, homemade jams and breakfast. Closed on Tuesdays.</li>
+</ul></div>
+<div class="group"><h3>International shops</h3><ul>
+<li>Around the Dappermarkt and in the Javastraat you will find many Turkish, Moroccan, Surinamese and Asian shops with products from all over the world.</li>
+</ul></div>
+</section>
+<section id="food"><h2>Eating and drinking in the neighborhood</h2>
+<div class="group"><h3>Breakfast and brunch</h3><ul>
+<li>Breakfast is not included in your stay. A few good places nearby:</li>
+<li><a class="place" href="https://maps.google.com/?q=Greek+Me+Up%2C+Dapperstraat+12H%2C+Amsterdam" target="_blank" rel="noopener">Greek Me Up</a> <span class="addr">Dapperstraat 12H</span>: Greek pies, pastries and freddo coffee. Closed on Mondays.</li>
+<li><a class="place" href="https://maps.google.com/?q=BQ+Canteen%2C+Oranje-Vrijstaatkade+69%2C+Amsterdam" target="_blank" rel="noopener">BQ Canteen</a> <span class="addr">Oranje-Vrijstaatkade 69</span>: brunch, savory pancakes and matcha next to the canal. Closed on Mondays.</li>
+<li><a class="place" href="https://maps.google.com/?q=Caf%C3%A9+Chantilly%2C+Molukkenstraat+53%2C+Amsterdam" target="_blank" rel="noopener">Café Chantilly</a> <span class="addr">Molukkenstraat 53</span>: big homemade pancakes and breakfast plates. Open Friday to Monday.</li>
+<li><a class="place" href="https://maps.google.com/?q=Bar+Botanique%2C+Eerste+van+Swindenstraat+581%2C+Amsterdam" target="_blank" rel="noopener">Bar Botanique</a> <span class="addr">Eerste van Swindenstraat 581</span>: weekend brunch in a café full of plants.</li>
+<li><a class="place" href="https://maps.google.com/?q=Dignita+Hoftuin%2C+Nieuwe+Herengracht+18a%2C+Amsterdam" target="_blank" rel="noopener">Dignita Hoftuin</a> <span class="addr">Nieuwe Herengracht 18a</span>: brunch in a glass pavilion in a garden, about 20 minutes on foot.</li>
+</ul></div>
+<div class="group"><h3>Coffee</h3><ul>
+<li><a class="place" href="https://maps.google.com/?q=KAFFEE%2C+Dapperplein+45%2C+Amsterdam" target="_blank" rel="noopener">KAFFEE</a> <span class="addr">Dapperplein 45</span>: good coffee, and tostis made with bread and cheese from the market.</li>
+<li><a class="place" href="https://maps.google.com/?q=Wakuli%2C+Wagenaarstraat+70H%2C+Amsterdam" target="_blank" rel="noopener">Wakuli</a> <span class="addr">Wagenaarstraat 70H</span>: specialty coffee, open from 7:00 on weekdays.</li>
+<li><a class="place" href="https://maps.google.com/?q=Haku%2C+Pontanusstraat+276%2C+Amsterdam" target="_blank" rel="noopener">Haku</a> <span class="addr">Pontanusstraat 276</span>: specialty coffee and matcha.</li>
+</ul></div>
+<div class="group"><h3>Working with a laptop</h3><ul>
+<li><a class="place" href="https://maps.google.com/?q=KAFFEE%2C+Dapperplein+45%2C+Amsterdam" target="_blank" rel="noopener">KAFFEE</a> <span class="addr">Dapperplein 45</span>: big shared tables, popular for working.</li>
+<li><a class="place" href="https://maps.google.com/?q=OBA+Linnaeus%2C+Linnaeusstraat+44%2C+Amsterdam" target="_blank" rel="noopener">OBA Linnaeus</a> <span class="addr">Linnaeusstraat 44</span>: the local public library, with desks and Wi-Fi. Check the opening hours, as it is closed several days a week. The library (OBA) has more locations around the city: search “OBA” in Google Maps.</li>
+<li><a class="place" href="https://maps.google.com/?q=Volkshotel%2C+Wibautstraat+150%2C+Amsterdam" target="_blank" rel="noopener">Volkshotel</a>, <a class="place" href="https://maps.google.com/?q=The+Social+Hub%2C+Wibautstraat+129%2C+Amsterdam" target="_blank" rel="noopener">The Social Hub</a> <span class="addr">formerly The Student Hotel</span> and <a class="place" href="https://maps.google.com/?q=House+of+Watt%2C+James+Wattstraat+73%2C+Amsterdam" target="_blank" rel="noopener">House of Watt</a>: cafés where working with a laptop is welcome, about 15 to 20 minutes away.</li>
+</ul></div>
+<div class="group"><h3>Quick lunch and takeaway</h3><ul>
+<li><a class="place" href="https://maps.google.com/?q=Beste+Doner%2C+Dapperstraat+4%2C+Amsterdam" target="_blank" rel="noopener">Beste Doner</a> <span class="addr">Dapperstraat 4</span>: lamb or chicken döner right at the market. Closed on Sundays.</li>
+<li><a class="place" href="https://maps.google.com/?q=Roopram+Roti%2C+Eerste+van+Swindenstraat+4%2C+Amsterdam" target="_blank" rel="noopener">Roopram Roti</a> <span class="addr">Eerste van Swindenstraat 4</span>: a Surinamese roti institution. Expect a queue. Opens at 14:00, closed on Mondays.</li>
+<li><a class="place" href="https://maps.google.com/?q=Toko+Jai+Mata%2C+Eerste+van+Swindenstraat+191%2C+Amsterdam" target="_blank" rel="noopener">Toko Jai Mata</a> <span class="addr">Eerste van Swindenstraat 191</span>: Surinamese sandwiches, baras and home-style dishes.</li>
+</ul></div>
+<div class="group"><h3>Dinner within a few minutes’ walk</h3><ul>
+<li><a class="place" href="https://maps.google.com/?q=Caf%C3%A9+Vlaming%2C+Dapperstraat+10%2C+Amsterdam" target="_blank" rel="noopener">Café Vlaming</a> <span class="addr">Dapperstraat 10</span>: small bistro with simple dishes done well, such as steak tartare, and good wine.</li>
+<li><a class="place" href="https://maps.google.com/?q=Caf%C3%A9+Dapper%2C+Dapperstraat+26%2C+Amsterdam" target="_blank" rel="noopener">Café Dapper</a> <span class="addr">Dapperstraat 26</span>: wine bar and restaurant with a nice terrace, serving oysters, fish and vegetarian dishes.</li>
+<li><a class="place" href="https://maps.google.com/?q=Nara+Nara%2C+Dapperplein+25%2C+Amsterdam" target="_blank" rel="noopener">Nara Nara</a> <span class="addr">Dapperplein 25</span>: Middle Eastern dishes to share and homemade lemonades.</li>
+<li><a class="place" href="https://maps.google.com/?q=Local+Dealer%2C+Dapperplein+23%2C+Amsterdam" target="_blank" rel="noopener">Local Dealer</a> <span class="addr">Dapperplein 23</span>: Mexican tacos and tostadas, also brunch on weekends.</li>
+<li><a class="place" href="https://maps.google.com/?q=Buurtcaf%C3%A9+De+Tros%2C+Linnaeusstraat+63H%2C+Amsterdam" target="_blank" rel="noopener">Buurtcafé De Tros</a> <span class="addr">Linnaeusstraat 63H</span>: very popular neighborhood bistro across from the Oosterpark. Book ahead.</li>
+<li><a class="place" href="https://maps.google.com/?q=De+Biertuin%2C+Linnaeusstraat+29%2C+Amsterdam" target="_blank" rel="noopener">De Biertuin</a> <span class="addr">Linnaeusstraat 29</span>: spit-roasted chicken, burgers and a long beer list. Good for groups; book ahead.</li>
+</ul></div>
+<div class="group"><h3>The Javastraat</h3><ul>
+<li>A 10-minute walk east, the Javastraat is lined with restaurants and cafés from all over the world. A few to try:</li>
+<li><a class="place" href="https://maps.google.com/?q=Restaurant+Nour%2C+Javastraat+109%2C+Amsterdam" target="_blank" rel="noopener">Restaurant Nour</a> <span class="addr">Javastraat 109</span>: Iraqi kebabs with fresh bread from the oven.</li>
+<li><a class="place" href="https://maps.google.com/?q=Yemen+Seafood+Restaurant%2C+Javastraat+23H%2C+Amsterdam" target="_blank" rel="noopener">Yemen Seafood Restaurant</a> <span class="addr">Javastraat 23H</span>: big seafood platters.</li>
+<li><a class="place" href="https://maps.google.com/?q=Le+French+Caf%C3%A9%2C+Javastraat+42%2C+Amsterdam" target="_blank" rel="noopener">Le French Café</a> <span class="addr">Javastraat 42</span>: French bistro dishes.</li>
+<li><a class="place" href="https://maps.google.com/?q=Bar+Basquiat%2C+Javastraat+88%2C+Amsterdam" target="_blank" rel="noopener">Bar Basquiat</a> <span class="addr">Javastraat 88-90</span>: neighborhood bar with burgers and tacos.</li>
+</ul></div>
+<div class="group"><h3>Special occasions</h3><ul>
+<li><a class="place" href="https://maps.google.com/?q=Cafe+Wu%2C+Dapperstraat+1%2C+Amsterdam" target="_blank" rel="noopener">Cafe Wu</a> <span class="addr">Dapperstraat 1</span>: Chinese flavors with French technique, served as a chef’s menu. Reservation recommended.</li>
+<li><a class="place" href="https://maps.google.com/?q=Bar+Bachrach%2C+Javaplein+25%2C+Amsterdam" target="_blank" rel="noopener">Bar Bachrach</a> <span class="addr">Javaplein 25</span>: modern Middle Eastern cooking and cocktails.</li>
+<li><a class="place" href="https://maps.google.com/?q=Wilde+Zwijnen%2C+Javaplein+23%2C+Amsterdam" target="_blank" rel="noopener">Wilde Zwijnen</a> <span class="addr">Javaplein 23</span>: modern Dutch cooking with produce from regional farms, served as set menus.</li>
+<li><a class="place" href="https://maps.google.com/?q=De+Kas%2C+Kamerlingh+Onneslaan+3%2C+Amsterdam" target="_blank" rel="noopener">De Kas</a> <span class="addr">Kamerlingh Onneslaan 3</span>: restaurant in a greenhouse in Park Frankendael, cooking with vegetables from its own garden. Book well in advance.</li>
+<li>Amsterdam has more than 20 restaurants with a Michelin star. The <a href="https://apps.apple.com/nl/app/the-michelin-guide/id1541129177" target="_blank" rel="noopener">Michelin Guide app</a> shows all of them on a map.</li>
+</ul></div>
+<div class="group"><h3>Local bars</h3><ul>
+<li><a class="place" href="https://maps.google.com/?q=Brouwerij+%E2%80%99t+IJ%2C+Funenkade+7%2C+Amsterdam" target="_blank" rel="noopener">Brouwerij ’t IJ</a> <span class="addr">Funenkade 7</span>: brewery under a windmill with a big terrace, about 10 minutes on foot. Try the tasting flight.</li>
+<li><a class="place" href="https://maps.google.com/?q=Caf%C3%A9+Publiek%2C+Dapperplein+23%2C+Amsterdam" target="_blank" rel="noopener">Café Publiek</a> <span class="addr">Dapperplein 23</span>: neighborhood café with a large, sunny terrace.</li>
+<li><a class="place" href="https://maps.google.com/?q=Caf%C3%A9+Kuijper%2C+Linnaeusstraat+79%2C+Amsterdam" target="_blank" rel="noopener">Café Kuijper</a> <span class="addr">Linnaeusstraat 79</span>: classic brown café with a terrace that gets sun most of the day.</li>
+<li><a class="place" href="https://maps.google.com/?q=De+Eeuwige+Jeugd%2C+Linnaeusstraat+37A%2C+Amsterdam" target="_blank" rel="noopener">De Eeuwige Jeugd</a> <span class="addr">Linnaeusstraat 37A</span>: bar of the local brewery with the same name, with board games.</li>
+<li><a class="place" href="https://maps.google.com/?q=Ruk+en+Pluk%2C+Linnaeusstraat+48%2C+Amsterdam" target="_blank" rel="noopener">Ruk en Pluk</a> <span class="addr">Linnaeusstraat 48</span>: small, very Dutch local pub.</li>
+</ul></div>
+</section>
+<section id="going-out"><h2>Going out in the city</h2>
+<div class="group"><h3>Good to know</h3><ul>
+<li><strong>Party bars</strong> are for drinking, dancing and talking. They get busy around 22:00, the music gets louder around midnight, and most are open until 3:00 or 4:00.</li>
+<li><strong>Clubs</strong> are all about dancing. Buy your ticket online in advance. Clubs get busy around midnight and are usually open until 4:00 to 6:00.</li>
+<li><strong>At the door:</strong> bars and clubs in Amsterdam can be strict with big groups, all-male groups and international groups. A small group with someone who speaks Dutch has the best chance. Otherwise, smile at the doorman and keep it short.</li>
+<li><strong>Getting home:</strong> after midnight there are only night buses, so a taxi is often the easiest way back to the apartment.</li>
+</ul></div>
+<div class="group"><h3>Leidseplein: Dutch and international crowd, good for bar hopping</h3><ul>
+<li><a class="place" href="https://maps.google.com/?q=Caf%C3%A9+La+Bastille%2C+Lijnbaansgracht%2C+Amsterdam" target="_blank" rel="noopener">Café La Bastille</a>, <a class="place" href="https://maps.google.com/?q=Surprise+Bar%2C+Leidsekruisstraat%2C+Amsterdam" target="_blank" rel="noopener">Surprise Bar</a>, <a class="place" href="https://maps.google.com/?q=Cooldown+Cafe%2C+Lange+Leidsedwarsstraat%2C+Amsterdam" target="_blank" rel="noopener">Cooldown Café</a>, <a class="place" href="https://maps.google.com/?q=Bubbles%2C+Lange+Leidsedwarsstraat%2C+Amsterdam" target="_blank" rel="noopener">Bubbles</a>, <a class="place" href="https://maps.google.com/?q=Caf%C3%A9+De+Gieter%2C+Korte+Leidsedwarsstraat%2C+Amsterdam" target="_blank" rel="noopener">Café De Gieter</a>, <a class="place" href="https://maps.google.com/?q=The+Waterhole%2C+Korte+Leidsedwarsstraat%2C+Amsterdam" target="_blank" rel="noopener">The Waterhole</a>, <a class="place" href="https://maps.google.com/?q=Chicago+Social+Club%2C+Leidseplein+12%2C+Amsterdam" target="_blank" rel="noopener">Chicago Social Club</a> and <a class="place" href="https://maps.google.com/?q=Kopstootbar%2C+Marnixstraat%2C+Amsterdam" target="_blank" rel="noopener">Kopstootbar</a>.</li>
+</ul></div>
+<div class="group"><h3>De Pijp: mostly Dutch crowd</h3><ul>
+<li><a class="place" href="https://maps.google.com/?q=Cafe+%27t+Paardje%2C+Gerard+Douplein%2C+Amsterdam" target="_blank" rel="noopener">Café ’t Paardje</a> and <a class="place" href="https://maps.google.com/?q=Cafe+Pilsvogel%2C+Gerard+Douplein%2C+Amsterdam" target="_blank" rel="noopener">Café Pilsvogel</a> <span class="addr">Gerard Douplein</span>, <a class="place" href="https://maps.google.com/?q=Calle+Ocho%2C+Albert+Cuypstraat%2C+Amsterdam" target="_blank" rel="noopener">Calle Ocho</a> <span class="addr">Albert Cuypstraat</span> and <a class="place" href="https://maps.google.com/?q=Escobar+bar%2C+De+Pijp%2C+Amsterdam" target="_blank" rel="noopener">Escobar</a>, plus many other bars in the area for a beer, wine or cocktails.</li>
+</ul></div>
+<div class="group"><h3>Rembrandtplein: mostly tourists</h3><ul>
+<li><a class="place" href="https://maps.google.com/?q=Coco%27s+Outback%2C+Thorbeckeplein%2C+Amsterdam" target="_blank" rel="noopener">Coco’s Outback</a> <span class="addr">Thorbeckeplein</span> and the many bars around it.</li>
+</ul></div>
+<div class="group"><h3>Clubs</h3><ul>
+<li>Check the club’s website or Instagram for the theme of the night, and know who the main DJ is: the doorman may ask, to see whether you came for the music.</li>
+<li><a class="place" href="https://maps.google.com/?q=Escape%2C+Rembrandtplein%2C+Amsterdam" target="_blank" rel="noopener">Escape</a> <span class="addr">Rembrandtplein</span>, <a class="place" href="https://maps.google.com/?q=AIR%2C+Amstelstraat+24%2C+Amsterdam" target="_blank" rel="noopener">AIR</a> <span class="addr">Amstelstraat</span>, <a class="place" href="https://maps.google.com/?q=Chin+Chin+Club%2C+Rozengracht%2C+Amsterdam" target="_blank" rel="noopener">Chin Chin Club</a> <span class="addr">Rozengracht</span>, <a class="place" href="https://maps.google.com/?q=Paradiso%2C+Weteringschans%2C+Amsterdam" target="_blank" rel="noopener">Paradiso</a> <span class="addr">Weteringschans</span> and <a class="place" href="https://maps.google.com/?q=Melkweg%2C+Lijnbaansgracht%2C+Amsterdam" target="_blank" rel="noopener">Melkweg</a> <span class="addr">Lijnbaansgracht</span>.</li>
+<li><strong>Techno: </strong><a class="place" href="https://maps.google.com/?q=Shelter%2C+Overhoeksplein+3%2C+Amsterdam" target="_blank" rel="noopener">Shelter</a> <span class="addr">Amsterdam-Noord</span>, <a class="place" href="https://maps.google.com/?q=Radion%2C+Louwesweg%2C+Amsterdam" target="_blank" rel="noopener">Radion</a> <span class="addr">Louwesweg</span>, <a class="place" href="https://maps.google.com/?q=Lofi%2C+Basisweg+63%2C+Amsterdam" target="_blank" rel="noopener">Lofi</a> <span class="addr">Basisweg</span> and <a class="place" href="https://maps.google.com/?q=Club+Raum%2C+Humberweg+3%2C+Amsterdam" target="_blank" rel="noopener">Club Raum</a> <span class="addr">Humberweg</span>.</li>
+<li>Most big clubs in Amsterdam play techno or house. If you like something else, such as reggae, reggaeton or R&amp;B, search online for a party in that style.</li>
+</ul></div>
+<div class="group"><h3>Concerts and live music</h3><ul>
+<li><a class="place" href="https://maps.google.com/?q=Paradiso%2C+Weteringschans%2C+Amsterdam" target="_blank" rel="noopener">Paradiso</a> and <a class="place" href="https://maps.google.com/?q=Melkweg%2C+Lijnbaansgracht%2C+Amsterdam" target="_blank" rel="noopener">Melkweg</a>: known for booking artists early in their careers. Most of their websites are in English.</li>
+<li><a class="place" href="https://maps.google.com/?q=The+Waterhole%2C+Korte+Leidsedwarsstraat%2C+Amsterdam" target="_blank" rel="noopener">The Waterhole</a> <span class="addr">Korte Leidsedwarsstraat</span>: live bands, mostly lesser-known acts.</li>
+<li><a class="place" href="https://maps.google.com/?q=AFAS+Live%2C+Amsterdam" target="_blank" rel="noopener">AFAS Live</a>, <a class="place" href="https://maps.google.com/?q=Ziggo+Dome%2C+Amsterdam" target="_blank" rel="noopener">Ziggo Dome</a> and <a class="place" href="https://maps.google.com/?q=Johan+Cruijff+ArenA%2C+Amsterdam" target="_blank" rel="noopener">Johan Cruijff ArenA</a>: the big venues for famous artists, all next to each other in the south-east of the city.</li>
+<li><strong>Classical: </strong><a class="place" href="https://maps.google.com/?q=Concertgebouw%2C+Amsterdam" target="_blank" rel="noopener">Concertgebouw</a> <span class="addr">Van Baerlestraat</span>.</li>
+<li>Full concert and theater agenda: <a href="https://www.iamsterdam.com" target="_blank" rel="noopener">www.iamsterdam.com</a></li>
+</ul></div>
+<div class="group"><h3>Theater</h3><ul>
+<li><a class="place" href="https://maps.google.com/?q=Royal+Theatre+Carr%C3%A9%2C+Amstel+115%2C+Amsterdam" target="_blank" rel="noopener">Carré</a> <span class="addr">on the Amstel river, about 20 minutes on foot</span> and <a class="place" href="https://maps.google.com/?q=International+Theater+Amsterdam%2C+Leidseplein%2C+Amsterdam" target="_blank" rel="noopener">International Theater Amsterdam</a> <span class="addr">Leidseplein</span>.</li>
+</ul></div>
+<div class="group"><h3>LGBTQ+</h3><ul>
+<li>The gay bars are all next to each other in the <a class="place" href="https://maps.google.com/?q=Reguliersdwarsstraat%2C+Amsterdam" target="_blank" rel="noopener">Reguliersdwarsstraat</a>, with a mostly younger crowd. Nice ones are Blend, Taboo and Exit.</li>
+<li><a class="place" href="https://maps.google.com/?q=Club+NYX%2C+Reguliersdwarsstraat+42%2C+Amsterdam" target="_blank" rel="noopener">Club NYX</a> <span class="addr">Reguliersdwarsstraat</span>: for dancing. Buy your ticket online in advance.</li>
+<li><a class="place" href="https://maps.google.com/?q=Club+Church%2C+Kerkstraat+52%2C+Amsterdam" target="_blank" rel="noopener">Club Church</a> <span class="addr">Kerkstraat</span>: fetish and themed parties. Check the calendar first, many nights have a dress code.</li>
+<li><a class="place" href="https://maps.google.com/?q=PRIK+bar%2C+Spuistraat%2C+Amsterdam" target="_blank" rel="noopener">PRIK</a> <span class="addr">Spuistraat</span>: bar with a crowd mostly in their 30s and 40s. <a class="place" href="https://maps.google.com/?q=Spijkerbar%2C+Kerkstraat%2C+Amsterdam" target="_blank" rel="noopener">Spijkerbar</a> <span class="addr">Kerkstraat</span>: mixed ages, roughly 30 to 70.</li>
+<li><a class="place" href="https://maps.google.com/?q=Sauna+Nieuwezijds%2C+Nieuwezijds+Armsteeg%2C+Amsterdam" target="_blank" rel="noopener">Sauna Nieuwezijds</a> <span class="addr">Nieuwezijds Armsteeg</span>.</li>
+</ul></div>
+<div class="group"><h3>Coffeeshops (cannabis)</h3><ul>
+<li>OK, some of you want to know, so here it is. The closest coffeeshop is <a class="place" href="https://maps.google.com/?q=Happy+People%2C+Dapperstraat+2%2C+Amsterdam" target="_blank" rel="noopener">Happy People</a>, at the start of the street.</li>
+<li>A famous one in the center is <a class="place" href="https://maps.google.com/?q=The+Bulldog%2C+Leidseplein%2C+Amsterdam" target="_blank" rel="noopener">The Bulldog</a> <span class="addr">Leidseplein</span>.</li>
+<li><a class="place" href="https://maps.google.com/?q=Smoke+Boat+Amsterdam" target="_blank" rel="noopener">Smoke Boat</a>: a canal cruise on which you may bring your own cannabis. It departs from the city center; book online.</li>
+<li>Remember: smoking is not allowed inside the apartment.</li>
+</ul></div>
+</section>
+<section id="things-to-do"><h2>Things to do</h2>
+<div class="group"><h3>In the neighborhood</h3><ul>
+<li><a class="place" href="https://maps.google.com/?q=Oosterpark%2C+Amsterdam" target="_blank" rel="noopener">Oosterpark</a>: a large park a few minutes away, nice for a walk or a run.</li>
+<li><a class="place" href="https://maps.google.com/?q=Wereldmuseum+Amsterdam%2C+Linnaeusstraat+2" target="_blank" rel="noopener">Wereldmuseum Amsterdam</a> <span class="addr">Linnaeusstraat 2</span>: museum of world cultures in a beautiful historic building, formerly the Tropenmuseum. About 5 to 10 minutes on foot.</li>
+<li><a class="place" href="https://maps.google.com/?q=Artis+Zoo%2C+Amsterdam" target="_blank" rel="noopener">Artis</a> <span class="addr">Plantage Kerklaan 38-40</span>: Amsterdam’s zoo, about 15 minutes on foot.</li>
+<li><a class="place" href="https://maps.google.com/?q=Verzetsmuseum%2C+Plantage+Kerklaan+61%2C+Amsterdam" target="_blank" rel="noopener">Verzetsmuseum</a> <span class="addr">Dutch Resistance Museum, Plantage Kerklaan 61</span>: daily life in Amsterdam during World War II and the resistance. About 15 minutes on foot.</li>
+<li><a class="place" href="https://maps.google.com/?q=Hortus+Botanicus%2C+Amsterdam" target="_blank" rel="noopener">Hortus Botanicus</a> <span class="addr">Plantage Middenlaan 2a</span>: one of the oldest botanical gardens in the world, about 20 minutes on foot.</li>
+<li><a class="place" href="https://maps.google.com/?q=Park+Frankendael%2C+Amsterdam" target="_blank" rel="noopener">Park Frankendael</a> <span class="addr">Middenweg 72</span>: a park around an 18th-century country house, about 20 minutes on foot.</li>
+<li><a class="place" href="https://maps.google.com/?q=Flevopark%2C+Amsterdam" target="_blank" rel="noopener">Flevopark</a>: a big, quiet park at the east end of the neighborhood, about 15 minutes on foot.</li>
+</ul></div>
+<div class="group"><h3>City center</h3><ul>
+<li>Most sights in the center are 20 to 30 minutes away by tram, or 15 to 20 minutes by bike. Google Maps or 9292 shows the best route.</li>
+<li><strong>Museumplein: </strong><a class="place" href="https://maps.google.com/?q=Rijksmuseum%2C+Amsterdam" target="_blank" rel="noopener">Rijksmuseum</a> <span class="addr">the famous Dutch paintings of the 17th century</span>, <a class="place" href="https://maps.google.com/?q=Van+Gogh+Museum%2C+Amsterdam" target="_blank" rel="noopener">Van Gogh Museum</a> <span class="addr">book in advance</span> and <a class="place" href="https://maps.google.com/?q=Stedelijk+Museum%2C+Amsterdam" target="_blank" rel="noopener">Stedelijk Museum</a> <span class="addr">modern and contemporary art</span>.</li>
+<li><a class="place" href="https://maps.google.com/?q=Anne+Frank+House%2C+Amsterdam" target="_blank" rel="noopener">Anne Frank House</a>: the house where the Frank family hid during the war. Book tickets online, often weeks in advance.</li>
+<li><a class="place" href="https://maps.google.com/?q=Royal+Palace+Amsterdam%2C+Dam" target="_blank" rel="noopener">Royal Palace</a> <span class="addr">Dam</span>: take the guided tour to learn about Amsterdam in the 17th century.</li>
+<li><a class="place" href="https://maps.google.com/?q=Rembrandthuis%2C+Jodenbreestraat+4%2C+Amsterdam" target="_blank" rel="noopener">Rembrandt House Museum</a>: the house where Rembrandt lived and worked, about 25 minutes on foot.</li>
+<li><a class="place" href="https://maps.google.com/?q=Museum+Van+Loon%2C+Amsterdam" target="_blank" rel="noopener">Museum Van Loon</a> and <a class="place" href="https://maps.google.com/?q=Museum+Ons%27+Lieve+Heer+op+Solder%2C+Amsterdam" target="_blank" rel="noopener">Our Lord in the Attic</a>: see the inside of 17th-century canal houses. The second has a hidden church in its attic, from a time when other religions were allowed as long as they were not visible from the street.</li>
+<li><a class="place" href="https://maps.google.com/?q=Amsterdam+Museum" target="_blank" rel="noopener">Amsterdam Museum</a> <span class="addr">history of the city</span>, <a class="place" href="https://maps.google.com/?q=FOAM+photography+museum%2C+Amsterdam" target="_blank" rel="noopener">FOAM</a> <span class="addr">photography</span> and the <a class="place" href="https://maps.google.com/?q=Heineken+Experience%2C+Amsterdam" target="_blank" rel="noopener">Heineken Experience</a> <span class="addr">the history of Heineken, beer included</span>.</li>
+<li><a class="place" href="https://maps.google.com/?q=NEMO+Science+Museum%2C+Amsterdam" target="_blank" rel="noopener">NEMO Science Museum</a> and <a class="place" href="https://maps.google.com/?q=Het+Scheepvaartmuseum%2C+Amsterdam" target="_blank" rel="noopener">Het Scheepvaartmuseum</a> (National Maritime Museum, with a replica of a 17th-century ship): both by the water, about 25 minutes on foot.</li>
+<li><a class="place" href="https://maps.google.com/?q=STRAAT+Museum%2C+NDSM%2C+Amsterdam" target="_blank" rel="noopener">Straat Museum</a>: street art and graffiti at the NDSM wharf in Amsterdam-Noord. Take the free ferry from behind Amsterdam Centraal.</li>
+<li>The complete list of museums: <a href="https://en.wikipedia.org/wiki/List_of_museums_in_Amsterdam" target="_blank" rel="noopener">List of museums in Amsterdam (Wikipedia)</a></li>
+</ul></div>
+<div class="group"><h3>Canals</h3><ul>
+<li>Canal cruises leave from many points in the center, for example around Amsterdam Centraal and opposite the Heineken Experience.</li>
+<li>Nice spots for your Amsterdam canal photo: <a class="place" href="https://maps.google.com/?q=Spiegelgracht+36%2C+Amsterdam" target="_blank" rel="noopener">Spiegelgracht 36</a>, <a class="place" href="https://maps.google.com/?q=Leidsegracht+68%2C+Amsterdam" target="_blank" rel="noopener">Leidsegracht 68</a> and <a class="place" href="https://maps.google.com/?q=Reguliersgracht+88%2C+Amsterdam" target="_blank" rel="noopener">Reguliersgracht 88</a>.</li>
+</ul></div>
+<div class="group"><h3>With kids</h3><ul>
+<li><a class="place" href="https://maps.google.com/?q=Artis+Zoo%2C+Amsterdam" target="_blank" rel="noopener">Artis</a> zoo. Next to it, restaurant <a class="place" href="https://maps.google.com/?q=De+Plantage%2C+Plantage+Kerklaan+36%2C+Amsterdam" target="_blank" rel="noopener">De Plantage</a> looks out over some of the zoo’s birds.</li>
+<li><a class="place" href="https://maps.google.com/?q=NEMO+Science+Museum%2C+Amsterdam" target="_blank" rel="noopener">NEMO Science Museum</a>: science museum for children, with its own restaurant.</li>
+<li><a class="place" href="https://maps.google.com/?q=Oosterpark%2C+Amsterdam" target="_blank" rel="noopener">Oosterpark</a>: playgrounds and space to run around, close to the apartment.</li>
+<li><a class="place" href="https://maps.google.com/?q=Dignita+Hoftuin%2C+Nieuwe+Herengracht+18a%2C+Amsterdam" target="_blank" rel="noopener">Dignita Hoftuin</a> and <a class="place" href="https://maps.google.com/?q=Huize+Frankendael+Merkelbach%2C+Middenweg+72%2C+Amsterdam" target="_blank" rel="noopener">Huize Frankendael / Merkelbach</a>: restaurants with a garden, away from traffic.</li>
+<li><a class="place" href="https://maps.google.com/?q=Hannekes+Boom%2C+Dijksgracht+4%2C+Amsterdam" target="_blank" rel="noopener">Hannekes Boom</a>: spacious café by the water, with no cars around. It is surrounded by water, so for your peace of mind, only go if your children can swim.</li>
+<li><a class="place" href="https://maps.google.com/?q=Groot+Melkhuis%2C+Vondelpark%2C+Amsterdam" target="_blank" rel="noopener">Groot Melkhuis</a>: café in the Vondelpark, the best-known park of Amsterdam.</li>
+</ul></div>
+<div class="group"><h3>Relaxing: sauna</h3><ul>
+<li><a class="place" href="https://maps.google.com/?q=Sauna+Deco%2C+Herengracht+115A%2C+Amsterdam" target="_blank" rel="noopener">Sauna Deco</a> <span class="addr">Herengracht</span>: Art Deco sauna in the center.</li>
+<li><a class="place" href="https://maps.google.com/?q=Hotel+%26+Wellness+Zuiver%2C+Koenenkade+8%2C+Amsterdam" target="_blank" rel="noopener">Zuiver</a> <span class="addr">Koenenkade</span>: large wellness center with many saunas and pools, next to the Amsterdamse Bos.</li>
+<li><a class="place" href="https://maps.google.com/?q=Volkshotel%2C+Wibautstraat+150%2C+Amsterdam" target="_blank" rel="noopener">Volkshotel</a> <span class="addr">Wibautstraat</span>: rooftop hot tubs and sauna, about 15 minutes away.</li>
+</ul></div>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <p>Questions during your stay? Send me a message, I’m happy to help.</p>
+  <p>Enjoy Amsterdam! Rafa</p>
+</footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var text = document.getElementById(btn.dataset.copy).textContent.trim();
+    function done(ok){ btn.textContent = ok ? 'Copied' : 'Select it'; setTimeout(function(){ btn.textContent = 'Copy'; }, 1800); }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(function(){ done(true); }, function(){ done(fallback(text)); });
+    } else { done(fallback(text)); }
+  });
+});
+function fallback(text){
+  try{
+    var t = document.createElement('textarea'); t.value = text; t.setAttribute('readonly','');
+    t.style.position='fixed'; t.style.opacity='0'; document.body.appendChild(t); t.select();
+    var ok = document.execCommand('copy'); document.body.removeChild(t); return ok;
+  }catch(e){ return false; }
+}
+</script>
+</body>
+</html>
