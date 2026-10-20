@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#1d3f6e">
+<meta name="theme-color" content="#244b94">
 <title>Dapperstraat 191 · Guide des invités</title>
 <link rel="alternate" hreflang="en" href="index.html">
 <link rel="alternate" hreflang="fr" href="fr.html">
@@ -13,7 +13,7 @@
 <link rel="alternate" hreflang="x-default" href="index.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#eef1ee;        /* fog over the canal */
@@ -21,7 +21,7 @@
   --ink:#1c2626;
   --muted:#5b6866;
   --line:#d6ddd9;
-  --enamel:#1d3f6e;    /* Amsterdam house-number blue */
+  --enamel:#244b94;    /* Amsterdam house-number blue */
   --enamel-ink:#ffffff;
   --awning:#f2c14e;    /* Dappermarkt awning yellow */
   --link:#1d3f6e;
@@ -29,7 +29,7 @@
 @media (prefers-color-scheme: dark){
   :root{
     --bg:#121a1c; --surface:#1a2427; --ink:#e4ebe8; --muted:#9aa9a6; --line:#2c3a3d;
-    --enamel:#24508a; --link:#9cc0f0;
+    --enamel:#244b94; --link:#9cc0f0;
   }
 }
 *{box-sizing:border-box}
@@ -48,27 +48,29 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 /* ---------- hero: the house-number plate ---------- */
 header.wrap{padding-top:16px;padding-bottom:28px}
 .hero{border-radius:18px;overflow:hidden;line-height:0}
-.hero svg{display:block;width:100%;height:auto}
+.hero img{display:block;width:100%;height:auto;aspect-ratio:1023/557;object-fit:cover}
 header .plate{position:relative;margin:-26px 0 0 14px}
 .hero-wrap{position:relative}
+@media (max-width:699px){.hero-wrap{display:flex;flex-direction:column}.hero-wrap .langs{position:static;order:-1;align-self:flex-end;margin:0 0 8px;box-shadow:none;background:var(--card,#fff)}}
 .langs{position:absolute;top:10px;right:10px;display:flex;gap:2px;padding:3px;border-radius:999px;
   background:rgba(255,255,255,.88);box-shadow:0 1px 3px rgba(0,0,0,.12)}
 .langs a{font:700 13px/1 "Atkinson Hyperlegible",sans-serif;letter-spacing:.5px;text-decoration:none;color:#1c2626;
   padding:7px 9px;border-radius:999px;min-width:34px;text-align:center}
-.langs a[aria-current="true"]{background:#1d3f6e;color:#fff}
+.langs a[aria-current="true"]{background:#244b94;color:#fff}
 .plate{
   display:inline-flex;align-items:center;justify-content:center;
   background:var(--enamel);color:var(--enamel-ink);
   border-radius:14px;padding:6px;
   box-shadow:0 2px 0 rgba(0,0,0,.18);
 }
-.plate span{
+.plate .inner{
   display:block;border:2px solid rgba(255,255,255,.9);border-radius:10px;
-  font:700 56px/1 "Bricolage Grotesque",sans-serif;letter-spacing:-1px;
-  padding:8px 18px 10px;
+  padding:10px 18px 11px;text-align:right;text-transform:uppercase;
 }
+.plate .name{display:block;font:400 clamp(22px, 7.4vw, 39px)/1.05 "Bricolage Grotesque",sans-serif;letter-spacing:-.5px;white-space:nowrap}
+.plate .district{display:block;font:400 clamp(14px, 4vw, 20px)/1.2 "Bricolage Grotesque",sans-serif;letter-spacing:.6px;margin-top:5px}
 .street{font:500 15px/1.3 "Bricolage Grotesque",sans-serif;color:var(--muted);margin:14px 0 4px}
-header h1{font-size:34px;font-weight:700;margin-top:18px}
+header h1{font-size:34px;font-weight:700;margin-top:20px}
 header p.lede{color:var(--muted);margin:10px 0 0;max-width:34em}
 
 .facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:22px 0 0}
@@ -133,7 +135,7 @@ li.photo .credit{display:block;color:var(--muted);font-size:13px;margin-top:6px}
 .howto details{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin:8px 0}
 .howto summary{cursor:pointer;list-style:none;padding:13px 16px;font-weight:700;display:flex;justify-content:space-between;gap:12px}
 .howto summary::-webkit-details-marker{display:none}
-.howto summary::after{content:"+";font:500 22px/1 "Bricolage Grotesque",sans-serif;color:var(--muted)}
+.howto summary::after{content:"+";font:400 34px/1 "Bricolage Grotesque",sans-serif;color:var(--ink);opacity:.75;width:28px;text-align:center}
 .howto details[open] summary::after{content:"–"}
 .howto .body{padding:0 16px 12px}
 .howto .body ul li{padding:7px 0}
@@ -148,7 +150,7 @@ details.getting{padding:0}
 details.getting > summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:12px 14px}
 details.getting > summary::-webkit-details-marker{display:none}
 details.getting > summary > span{flex:1;min-width:0}
-details.getting > summary::after{content:"+";flex:0 0 auto;font:500 24px/1 "Bricolage Grotesque",sans-serif;color:var(--muted)}
+details.getting > summary::after{content:"+";flex:0 0 auto;font:400 34px/1 "Bricolage Grotesque",sans-serif;color:var(--ink);opacity:.75;width:28px;text-align:center}
 details.getting[open] > summary::after{content:"–"}
 details.getting .addrline{font:700 18px/1.25 "Bricolage Grotesque",sans-serif;margin:2px 0 3px;color:var(--ink)}
 details.getting .ghint{display:block;color:var(--muted);font-size:15px;line-height:1.35}
@@ -166,7 +168,7 @@ details.getting .ghint{display:block;color:var(--muted);font-size:15px;line-heig
 .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;margin:10px 0;overflow:hidden}
 .card > summary{list-style:none;cursor:pointer;display:flex;gap:14px;align-items:center;padding:12px 14px 12px 12px}
 .card > summary::-webkit-details-marker{display:none}
-.card > summary::after{content:"+";flex:0 0 auto;font:500 24px/1 "Bricolage Grotesque",sans-serif;color:var(--muted)}
+.card > summary::after{content:"+";flex:0 0 auto;font:400 34px/1 "Bricolage Grotesque",sans-serif;color:var(--ink);opacity:.75;width:28px;text-align:center}
 .card[open] > summary::after{content:"–"}
 .thumb{flex:0 0 64px;height:64px;border-radius:12px;overflow:hidden}
 .thumb svg{display:block;width:100%;height:100%}
@@ -185,11 +187,10 @@ footer p{margin:6px 0}
 
 <header class="wrap">
   <div class="hero-wrap">
-    <div class="hero"><svg viewBox="0 0 360 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration des étals du Dappermarkt, de l’Oosterpark et du moulin De Gooyer" preserveAspectRatio="xMidYMid slice"><rect width="360" height="160" fill="#d7e6ee"/><circle cx="186" cy="30" r="13" fill="#f6d27a"/><g fill="#fff" opacity=".9"><ellipse cx="74" cy="26" rx="22" ry="7"/><ellipse cx="88" cy="21" rx="13" ry="7"/><ellipse cx="236" cy="40" rx="16" ry="5"/></g><polygon points="0,128 0,62 15.0,52 30,62 30,128" fill="#c9765a"/><rect x="6.0" y="68" width="6.6" height="8" fill="#f7f3ea" opacity=".85"/><rect x="17.4" y="68" width="6.6" height="8" fill="#f7f3ea" opacity=".85"/><rect x="6.0" y="81" width="6.6" height="8" fill="#f7f3ea" opacity=".85"/><rect x="17.4" y="81" width="6.6" height="8" fill="#f7f3ea" opacity=".85"/><rect x="6.0" y="94" width="6.6" height="8" fill="#f7f3ea" opacity=".85"/><rect x="17.4" y="94" width="6.6" height="8" fill="#f7f3ea" opacity=".85"/><polygon points="30,128 30,70 47.0,60 64,70 64,128" fill="#e3c9a8"/><rect x="36.8" y="76" width="7.5" height="8" fill="#f7f3ea" opacity=".85"/><rect x="49.7" y="76" width="7.5" height="8" fill="#f7f3ea" opacity=".85"/><rect x="36.8" y="89" width="7.5" height="8" fill="#f7f3ea" opacity=".85"/><rect x="49.7" y="89" width="7.5" height="8" fill="#f7f3ea" opacity=".85"/><rect x="36.8" y="102" width="7.5" height="8" fill="#f7f3ea" opacity=".85"/><rect x="49.7" y="102" width="7.5" height="8" fill="#f7f3ea" opacity=".85"/><polygon points="64,128 64,66 78.0,56 92,66 92,128" fill="#b8553f"/><rect x="69.6" y="72" width="6.2" height="8" fill="#f7f3ea" opacity=".85"/><rect x="80.2" y="72" width="6.2" height="8" fill="#f7f3ea" opacity=".85"/><rect x="69.6" y="85" width="6.2" height="8" fill="#f7f3ea" opacity=".85"/><rect x="80.2" y="85" width="6.2" height="8" fill="#f7f3ea" opacity=".85"/><rect x="69.6" y="98" width="6.2" height="8" fill="#f7f3ea" opacity=".85"/><rect x="80.2" y="98" width="6.2" height="8" fill="#f7f3ea" opacity=".85"/><polygon points="92,128 92,62 109.0,52 126,62 126,128" fill="#d9a77c"/><rect x="98.8" y="68" width="7.5" height="8" fill="#f7f3ea" opacity=".85"/><rect x="111.7" y="68" width="7.5" height="8" fill="#f7f3ea" opacity=".85"/><rect x="98.8" y="81" width="7.5" height="8" fill="#f7f3ea" opacity=".85"/><rect x="111.7" y="81" width="7.5" height="8" fill="#f7f3ea" opacity=".85"/><rect x="98.8" y="94" width="7.5" height="8" fill="#f7f3ea" opacity=".85"/><rect x="111.7" y="94" width="7.5" height="8" fill="#f7f3ea" opacity=".85"/><rect y="128" width="360" height="32" fill="#9cc58a"/><rect x="0" y="128" width="128" height="32" fill="#c9b9a3"/><polygon points="10.0,76 18.0,76 15.3,92 6.0,92" fill="#f2c14e"/><polygon points="18.0,76 26.0,76 24.7,92 15.3,92" fill="#ffffff"/><polygon points="26.0,76 34.0,76 34.0,92 24.7,92" fill="#f2c14e"/><polygon points="34.0,76 42.0,76 43.3,92 34.0,92" fill="#ffffff"/><polygon points="42.0,76 50.0,76 52.7,92 43.3,92" fill="#f2c14e"/><polygon points="50.0,76 58.0,76 62.0,92 52.7,92" fill="#ffffff"/><circle cx="10.7" cy="92" r="4.7" fill="#f2c14e"/><circle cx="20.0" cy="92" r="4.7" fill="#ffffff"/><circle cx="29.3" cy="92" r="4.7" fill="#f2c14e"/><circle cx="38.7" cy="92" r="4.7" fill="#ffffff"/><circle cx="48.0" cy="92" r="4.7" fill="#f2c14e"/><circle cx="57.3" cy="92" r="4.7" fill="#ffffff"/><rect x="8" y="92" width="2" height="36" fill="#5b4636"/><rect x="58" y="92" width="2" height="36" fill="#5b4636"/><rect x="9" y="110" width="50" height="5" rx="1" fill="#8a6a4e"/><rect x="11.0" y="103" width="13.3" height="7" fill="#c49a6c"/><circle cx="14.0" cy="102" r="2.6" fill="#e8743b"/><circle cx="18.7" cy="102" r="2.6" fill="#f0a33a"/><circle cx="23.3" cy="102" r="2.6" fill="#e8743b"/><rect x="26.3" y="103" width="13.3" height="7" fill="#c49a6c"/><circle cx="29.3" cy="102" r="2.6" fill="#7bb661"/><circle cx="34.0" cy="102" r="2.6" fill="#a9cf6b"/><circle cx="38.7" cy="102" r="2.6" fill="#7bb661"/><rect x="41.7" y="103" width="13.3" height="7" fill="#c49a6c"/><circle cx="44.7" cy="102" r="2.6" fill="#d9443f"/><circle cx="49.3" cy="102" r="2.6" fill="#e8743b"/><circle cx="54.0" cy="102" r="2.6" fill="#d9443f"/><polygon points="70.0,76 78.0,76 75.3,92 66.0,92" fill="#d9534f"/><polygon points="78.0,76 86.0,76 84.7,92 75.3,92" fill="#ffffff"/><polygon points="86.0,76 94.0,76 94.0,92 84.7,92" fill="#d9534f"/><polygon points="94.0,76 102.0,76 103.3,92 94.0,92" fill="#ffffff"/><polygon points="102.0,76 110.0,76 112.7,92 103.3,92" fill="#d9534f"/><polygon points="110.0,76 118.0,76 122.0,92 112.7,92" fill="#ffffff"/><circle cx="70.7" cy="92" r="4.7" fill="#d9534f"/><circle cx="80.0" cy="92" r="4.7" fill="#ffffff"/><circle cx="89.3" cy="92" r="4.7" fill="#d9534f"/><circle cx="98.7" cy="92" r="4.7" fill="#ffffff"/><circle cx="108.0" cy="92" r="4.7" fill="#d9534f"/><circle cx="117.3" cy="92" r="4.7" fill="#ffffff"/><rect x="68" y="92" width="2" height="36" fill="#5b4636"/><rect x="118" y="92" width="2" height="36" fill="#5b4636"/><rect x="69" y="110" width="50" height="5" rx="1" fill="#8a6a4e"/><rect x="71.0" y="103" width="13.3" height="7" fill="#c49a6c"/><circle cx="74.0" cy="102" r="2.6" fill="#e8743b"/><circle cx="78.7" cy="102" r="2.6" fill="#f0a33a"/><circle cx="83.3" cy="102" r="2.6" fill="#e8743b"/><rect x="86.3" y="103" width="13.3" height="7" fill="#c49a6c"/><circle cx="89.3" cy="102" r="2.6" fill="#7bb661"/><circle cx="94.0" cy="102" r="2.6" fill="#a9cf6b"/><circle cx="98.7" cy="102" r="2.6" fill="#7bb661"/><rect x="101.7" y="103" width="13.3" height="7" fill="#c49a6c"/><circle cx="104.7" cy="102" r="2.6" fill="#d9443f"/><circle cx="109.3" cy="102" r="2.6" fill="#e8743b"/><circle cx="114.0" cy="102" r="2.6" fill="#d9443f"/><ellipse cx="185" cy="146" rx="34" ry="7" fill="#7fb0d6"/><rect x="148.5" y="102" width="3" height="26" fill="#5b4636"/><circle cx="150" cy="102" r="17" fill="#4f8a5b"/><circle cx="157.7" cy="106.2" r="11.1" fill="#6aa46d"/><rect x="184.5" y="94" width="3" height="34" fill="#5b4636"/><circle cx="186" cy="94" r="20" fill="#3f7a4f"/><circle cx="195.0" cy="99.0" r="13.0" fill="#5d975f"/><rect x="218.5" y="104" width="3" height="24" fill="#5b4636"/><circle cx="220" cy="104" r="15" fill="#5d975f"/><circle cx="226.8" cy="107.8" r="9.8" fill="#8fbf7a"/><path d="M244 140 H360 V160 H236 Z" fill="#7fb0d6"/><path d="M262 148 h22 M300 154 h28" stroke="#fff" stroke-width="2" opacity=".6"/><polygon points="270.0,134 330.0,134 323.0,98.0 277.0,98.0" fill="#b8553f"/><rect x="295.0" y="120.0" width="10.0" height="14.0" rx="5.0" fill="#3c403d"/><rect x="284.0" y="106.0" width="6.0" height="7.0" fill="#f7f3ea"/><rect x="310.0" y="106.0" width="6.0" height="7.0" fill="#f7f3ea"/><polygon points="281.0,98.0 319.0,98.0 311.0,62.0 289.0,62.0" fill="#4a4e4a"/><rect x="267.0" y="96.0" width="66.0" height="4.0" fill="#3c403d"/><path d="M287.0,64.0 Q300,48.0 313.0,64.0 Z" fill="#3c403d"/><g transform="rotate(22 300 58.0)"><line x1="300" y1="58.0" x2="300" y2="12.0" stroke="#5b4636" stroke-width="2.0"/><rect x="301.0" y="12.0" width="9.0" height="38.0" fill="#f7f3ea" stroke="#5b4636" stroke-width="1.0"/><line x1="301.0" y1="18.3" x2="310.0" y2="18.3" stroke="#5b4636" stroke-width="0.8"/><line x1="301.0" y1="24.7" x2="310.0" y2="24.7" stroke="#5b4636" stroke-width="0.8"/><line x1="301.0" y1="31.0" x2="310.0" y2="31.0" stroke="#5b4636" stroke-width="0.8"/><line x1="301.0" y1="37.3" x2="310.0" y2="37.3" stroke="#5b4636" stroke-width="0.8"/><line x1="301.0" y1="43.7" x2="310.0" y2="43.7" stroke="#5b4636" stroke-width="0.8"/></g><g transform="rotate(112 300 58.0)"><line x1="300" y1="58.0" x2="300" y2="12.0" stroke="#5b4636" stroke-width="2.0"/><rect x="301.0" y="12.0" width="9.0" height="38.0" fill="#f7f3ea" stroke="#5b4636" stroke-width="1.0"/><line x1="301.0" y1="18.3" x2="310.0" y2="18.3" stroke="#5b4636" stroke-width="0.8"/><line x1="301.0" y1="24.7" x2="310.0" y2="24.7" stroke="#5b4636" stroke-width="0.8"/><line x1="301.0" y1="31.0" x2="310.0" y2="31.0" stroke="#5b4636" stroke-width="0.8"/><line x1="301.0" y1="37.3" x2="310.0" y2="37.3" stroke="#5b4636" stroke-width="0.8"/><line x1="301.0" y1="43.7" x2="310.0" y2="43.7" stroke="#5b4636" stroke-width="0.8"/></g><g transform="rotate(202 300 58.0)"><line x1="300" y1="58.0" x2="300" y2="12.0" stroke="#5b4636" stroke-width="2.0"/><rect x="301.0" y="12.0" width="9.0" height="38.0" fill="#f7f3ea" stroke="#5b4636" stroke-width="1.0"/><line x1="301.0" y1="18.3" x2="310.0" y2="18.3" stroke="#5b4636" stroke-width="0.8"/><line x1="301.0" y1="24.7" x2="310.0" y2="24.7" stroke="#5b4636" stroke-width="0.8"/><line x1="301.0" y1="31.0" x2="310.0" y2="31.0" stroke="#5b4636" stroke-width="0.8"/><line x1="301.0" y1="37.3" x2="310.0" y2="37.3" stroke="#5b4636" stroke-width="0.8"/><line x1="301.0" y1="43.7" x2="310.0" y2="43.7" stroke="#5b4636" stroke-width="0.8"/></g><g transform="rotate(292 300 58.0)"><line x1="300" y1="58.0" x2="300" y2="12.0" stroke="#5b4636" stroke-width="2.0"/><rect x="301.0" y="12.0" width="9.0" height="38.0" fill="#f7f3ea" stroke="#5b4636" stroke-width="1.0"/><line x1="301.0" y1="18.3" x2="310.0" y2="18.3" stroke="#5b4636" stroke-width="0.8"/><line x1="301.0" y1="24.7" x2="310.0" y2="24.7" stroke="#5b4636" stroke-width="0.8"/><line x1="301.0" y1="31.0" x2="310.0" y2="31.0" stroke="#5b4636" stroke-width="0.8"/><line x1="301.0" y1="37.3" x2="310.0" y2="37.3" stroke="#5b4636" stroke-width="0.8"/><line x1="301.0" y1="43.7" x2="310.0" y2="43.7" stroke="#5b4636" stroke-width="0.8"/></g><circle cx="300" cy="58.0" r="3.5" fill="#3c403d"/></svg></div>
+    <div class="hero"><img src="dappermarkt.jpg" width="1023" height="557" alt="Le Dappermarkt, le marché de rue juste devant la porte" fetchpriority="high"></div>
     <nav class="langs" aria-label="Langue"><a href="index.html" hreflang="en" lang="en" title="English" aria-label="English">EN</a><a href="fr.html" hreflang="fr" lang="fr" title="Français" aria-label="Français" aria-current="true">FR</a><a href="pt.html" hreflang="pt" lang="pt" title="Português" aria-label="Português">PT</a><a href="de.html" hreflang="de" lang="de" title="Deutsch" aria-label="Deutsch">DE</a></nav>
   </div>
-  <div class="plate" aria-hidden="true"><span>191</span></div>
-  <p class="street">Dapperstraat · Amsterdam-Oost</p>
+  <div class="plate"><span class="inner"><span class="name">Dapperstraat 191</span><span class="district">Amsterdam Oost</span></span></div>
   <h1>Bienvenue chez vous</h1>
   <p class="lede">J’espère que mon appartement vous plaira. Faites comme chez vous et ouvrez tous les placards que vous voulez : il n’y a pas de secrets. Mi casa es tu casa pendant votre séjour !</p>
 
